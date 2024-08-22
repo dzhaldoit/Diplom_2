@@ -1,14 +1,16 @@
+import pytest
 
 
 class Endpoints:
-    LOGIN = "api/auth/login"
-    REGISTER = "api/auth/register"
-    LOGOUT = "api/auth/logout"
-    CREATE_USER = "api/auth/user"
-    DELETE_USER = "api/auth/user"
-    PLACE_DATA = "api/auth/user"
-    CREATE_ORDER = "api/orders"
-    GET_ORDER = "api/orders"
+    URL = 'https://stellarburgers.nomoreparties.site/'
+    LOGIN = f"{URL}api/auth/login"
+    REGISTER = f"{URL}api/auth/register"
+    LOGOUT = f"{URL}api/auth/logout"
+    CREATE_USER = f"{URL}api/auth/user"
+    DELETE_USER = f"{URL}api/auth/user"
+    PLACE_DATA = f"{URL}api/auth/user"
+    CREATE_ORDER = f"{URL}api/orders"
+    GET_ORDER = f"{URL}api/orders"
 
 
 class TextAnswer:
