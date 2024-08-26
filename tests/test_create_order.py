@@ -1,6 +1,7 @@
 import allure
 
 from data import Endpoints, Ingredients, TextAnswer
+from helpers import IngredientsNone
 
 
 @allure.suite("Создание заказа")
@@ -40,10 +41,9 @@ class TestCreateOrder:
                                  method='post',
                                  data=user_data)
 
-        ingredients = {"ingredients": ['']}
         response = api_request_and_validate(Endpoints.CREATE_ORDER,
                                             method='post',
-                                            data={"ingredients": ingredients})
+                                            data=IngredientsNone.ingredients_none)
 
         assert response.status_code == 400
         assert TextAnswer.NOT_INGREDIENT in response.text

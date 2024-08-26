@@ -74,6 +74,7 @@ def non_auth_updated_name(create_user):
     new_name = {"name": new_name_value}
     yield new_name
 
+
 @pytest.fixture
 def api_request_and_validate():
     def _api_request_and_validate(url,

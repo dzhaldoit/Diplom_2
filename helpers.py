@@ -22,3 +22,9 @@ class RandomUsers:
         return payload
 
 
+class IngredientsNone:
+
+    ingredients_none = {"ingredients":
+                        {"ingredients": ['']}
+                        }
+
